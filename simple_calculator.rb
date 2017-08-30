@@ -62,3 +62,10 @@ while @input != 0 do
   else puts "Opcion invalida"
   end
 end
+
+
+
+#MAGIC #
+["a", 1, 3,"f","010",-2,-2.5].keep_if{|item| item.to_s.scan(/(\A[+-]?\d+(\.?\d+)?\z)/).any? }
+                            .map{|item| item.to_f}
+                            .sum
